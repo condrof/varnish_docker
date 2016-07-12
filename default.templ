@@ -15,7 +15,7 @@ vcl 4.0;
 
 # Default backend definition. Set this to point to your content server.
 backend default {
-    .host = "${BACKEND_PORT}";
+    .host = "${BACKEND_ADDR}";
     .port = "${BACKEND_PORT}";
     .connect_timeout = 600s;
     .first_byte_timeout = 600s;
@@ -26,7 +26,7 @@ backend default {
 # Only allow purging from specific IPs
 acl purge {
     "localhost";
-    "${BACKEND_PORT}";
+    "${BACKEND_ADDR}";
 }
 
 # This function is used when a request is send by a HTTP client (Browser)
