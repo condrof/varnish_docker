@@ -1,0 +1,8 @@
+nginx:
+  container_name: "varnish"
+  image: varnish
+  restart: always
+  environment:
+    BACKEND_PORT_80_TCP_ADDR: 192.168.15.105
+  ports:
+    - "4001:80"

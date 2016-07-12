@@ -10,6 +10,7 @@ RUN apt-get update && \
 
 COPY start-varnish.sh /start-varnish.sh
 COPY default.templ /etc/varnish/default.templ
+RUN chmod +x /start-varnish.sh
 
 ENV CACHE_SIZE=128m
 
