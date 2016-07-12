@@ -3,7 +3,7 @@ varnish:
   image: varnish
   restart: always
   environment:
-    BACKEND_PORT: 192.168.15.105
+    BACKEND_ADDR: 192.168.15.105
     BACKEND_PORT: 3000
   ports:
     - "4001:80"

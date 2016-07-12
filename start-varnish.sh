@@ -1,5 +1,5 @@
 #!/bin/bash
-for name in BACKEND_PORT
+for name in BACKEND_ADDR
 do
   eval value=\$$name
   sed -ie "s|\${${name}}|${value}|g" /etc/varnish/default.templ
