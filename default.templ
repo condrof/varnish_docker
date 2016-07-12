@@ -26,7 +26,7 @@ backend default {
 # Only allow purging from specific IPs
 acl purge {
     "localhost";
-    "${BACKEND_ADDR}";
+    "${BACKEND_ADDR_IP}";
 }
 
 # This function is used when a request is send by a HTTP client (Browser)

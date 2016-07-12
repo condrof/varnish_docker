@@ -1,5 +1,5 @@
 #!/bin/bash
-for name in BACKEND_ADDR
+for name in BACKEND_ADDR BACKEND_ADDR_IP
 do
   eval value=\$$name
   sed -ie "s|\${${name}}|${value}|g" /etc/varnish/default.templ
