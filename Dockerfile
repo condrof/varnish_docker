@@ -14,6 +14,7 @@ RUN chmod +x /start-varnish.sh
 
 ENV CACHE_SIZE=128m
 
+WORKDIR /etc/varnish
 EXPOSE 80
 
 CMD ["/start-varnish.sh"]
