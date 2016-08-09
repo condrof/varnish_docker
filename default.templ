@@ -25,6 +25,7 @@ backend default {
 
 # Only allow purging from specific IPs
 acl purge {
+    "*";
     "localhost";
     "${BACKEND_ADDR_IP}";
 }
